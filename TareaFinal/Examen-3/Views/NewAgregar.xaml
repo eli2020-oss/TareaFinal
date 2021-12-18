@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:Examen_3.ViewModels"
+             x:Class="Examen_3.Views.VistaAgregar">
+    <ContentPage.BindingContext>
+        <vm:BaseViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            
+          
+            
+            <Entry x:Name="txtidempleado" Text="{Binding Id_empleado, Mode=TwoWay}" IsVisible="false" />
+
+            <Entry x:Name="txtnombre" Text="{Binding Nombre, Mode=TwoWay}" Placeholder="Nombre" />
+            
+            <Entry x:Name="txtapellido" Text="{Binding Apellido, Mode=TwoWay}" Placeholder="Apellido" />
+
+            <Entry x:Name="txtedad" Text="{Binding Edad, Mode=TwoWay}" Placeholder="Edad" />
+
+            <Entry x:Name="txtdireccion" Text="{Binding Direccion, Mode=TwoWay}" Placeholder="Direccion" />
+
+            <Entry x:Name="txtpuesto" Text="{Binding Puesto, Mode=TwoWay}" Placeholder="Puesto" />
+
+            <Button Text="Guardar" Command="{Binding cmdAddTask}"  
+                    HeightRequest="50" WidthRequest="250"  VerticalOptions="Center" 
+         HorizontalOptions ="Center"/>
+
+            
+            <Button x:Name="btnlista" Text="Lista de Empleados" Clicked="btnlista_Clicked"
+                    HeightRequest="50" WidthRequest="250"  VerticalOptions="Center" 
+         HorizontalOptions ="Center" />
+
+           
+
+          
+
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
